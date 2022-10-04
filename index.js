@@ -4,6 +4,9 @@ import puppeteer from "puppeteer";
 
 const testMode = true;
 
+const accountEmail = "";
+const accountPassword = "";
+
 const videosLinks = [
   "https://www.youtube.com/watch?v=QHLPZgezlhg",
   "https://www.youtube.com/watch?v=P92H2I2Wrqc",
@@ -74,7 +77,7 @@ const maxDelayBettwenVideos = 15;
     //ENTER EMAIL
     await page.waitForSelector("input[name='identifier']");
     await page.waitForTimeout(2000);
-    await page.type("input[name='identifier']", "tahir.ayoub.dev@gmail.com", {
+    await page.type("input[name='identifier']", accountEmail, {
       delay: 150,
     });
 
@@ -85,7 +88,7 @@ const maxDelayBettwenVideos = 15;
     //ENTER PASSWORD
     await page.waitForSelector("input[name='Passwd']");
     await page.waitForTimeout(2000);
-    await page.type("input[name='Passwd']", "khadija0617760248A", {
+    await page.type("input[name='Passwd']", accountPassword, {
       delay: 150,
     });
 
